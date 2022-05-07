@@ -6,7 +6,7 @@ conda_dir = conda_file_dir.split('lib')[0]
 proj_lib = os.path.join(os.path.join(conda_dir, 'share'), 'proj')
 os.environ["PROJ_LIB"] = proj_lib
 
-
+import geopandas as gpd
 import pandas as pd # library for data analsysis
 import json # library to handle JSON files
 from geopy.geocoders import Nominatim # convert an address into latitude and longitude values
@@ -17,7 +17,7 @@ import streamlit as st
 from streamlit_folium import folium_static
 #------------------------------------------------
 #data_all = pd.read_csv('Surabaya_Full_of_Data.csv')
-import geopandas as gpd
+
 #data_all = gpd.read_file('il_ia_mo.geojson')
 data_all = gpd.read_file('new.geojson')
 #data_geo = json.load(open('Kecamatan_Surabaya.geojson'))
